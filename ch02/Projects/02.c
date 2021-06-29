@@ -5,6 +5,8 @@
 
 int main(void)
 {
-	float vol = FRACTION * ( PI * (10 * 10 * 10));
+	float vol;
+   
+	vol	= FRACTION * ( PI * (10 * 10 * 10));
 	printf("%.2f\n", vol);
 }
