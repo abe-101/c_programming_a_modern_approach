@@ -7,7 +7,7 @@ int main(void)
 {
 	float vol, radius;
    
-	printf( "Please enter the radius: \n");
+	printf( "Enter the radius of a sphere: ");
 	scanf( "%f", &radius );
 	vol	= FRACTION * ( PI * (radius * radius * radius));
 	printf("%.2f\n", vol);
