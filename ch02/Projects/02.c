@@ -9,4 +9,6 @@ int main(void)
    
 	vol	= FRACTION * ( PI * (10 * 10 * 10));
 	printf("%.2f\n", vol);
+
+	return 0;
 }
