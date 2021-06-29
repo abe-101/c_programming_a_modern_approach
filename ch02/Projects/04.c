@@ -6,6 +6,6 @@ int main(void)
 
 	printf( "Enter an amount: ");
 	scanf( "%f", &price );
-	printf( "With tax added: %.2f\n", price + (price / 20 ));
+	printf( "With tax added: $%.2f\n", price * 1.05f);
 	return 0 ;
 }
