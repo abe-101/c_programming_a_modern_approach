@@ -3,7 +3,7 @@
 
 #define MAX_DIGITS 10
 
-/* external vaiables             _    |    |    _    |    |    _*/
+/* external vaiables */
 const char segments[10] [7] = {{'_', '|', '|', '_', '|', '|', ' '},
                                {' ', '|', '|', ' ', ' ', ' ', ' '},
                                {'_', '|', ' ', '_', '|', ' ', '_'},
