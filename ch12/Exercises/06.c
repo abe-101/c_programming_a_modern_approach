@@ -6,7 +6,7 @@ int sum_array(const int a[], int n);
 
 int main(void)
 {
-    int a[5];
+    int a[N];
     int *p;
     printf("Enter %d digit array: ", N);
     for (p = a; p < a + N; p++) {
