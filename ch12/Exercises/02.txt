@@ -1,0 +1,1 @@
+middle = ((high - low) / 2) + low
