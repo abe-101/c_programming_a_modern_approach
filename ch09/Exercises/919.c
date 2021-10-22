@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void pb(int n);
+void print_binary(int n);
 
 int main(void)
 {
@@ -9,17 +9,17 @@ int main(void)
 	printf("Enter an integer to be translated to binary: ");
 	scanf("%d", &n);
 
-	pb(n); 
+	print_binary(n); 
 
 	printf("\n");
 
 	return 0;
 }
 
-void pb(int n)
+void print_binary(int n)
 {
 	if (n != 0) {
-		pb(n / 2);
+		print_binary(n / 2);
 		putchar('0' + n % 2);
 	}
 }
