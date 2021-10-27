@@ -6,7 +6,7 @@
 
 int main(void)
 {
-    char c, message[N], *pa = message, *pb = message;
+    char c, message[N], *pa = &message[0], *pb = &message[0];
     bool flag = 0;
 
     printf("Enter a message: ");

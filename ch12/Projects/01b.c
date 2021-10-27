@@ -4,7 +4,7 @@
 
 int main(void)
 {
-    char c, message[N], *pc = message;
+    char c, message[N], *pc = &message[0];
 
     printf("Enter a message: ");
     while ((c = getchar()) != '\n' && pc < message + N)
