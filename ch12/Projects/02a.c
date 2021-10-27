@@ -8,7 +8,7 @@ int main(void)
 {
     char c, message[N];
     int i = 0, j = 0;
-    bool flag = 0;
+    bool flag = false;
 
     printf("Enter a message: ");
     while ((c = getchar()) != '\n')
@@ -21,7 +21,7 @@ int main(void)
     {
         if (message[i--] != message[j++])
         {
-            flag = 1;
+            flag = true;
         }
     }
     if (flag)
