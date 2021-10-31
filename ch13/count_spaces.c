@@ -10,12 +10,12 @@
 /*  (chapter 13, page 287) */
 #include <stdio.h>
 
-int count_spaces(const char s[])
+int count_spaces(const char *s)
 {
-    int count = 0, i;
+    int count = 0;
 
-    for (i = 0; s[i] != '\0'; i++)
-        if (s[i] == ' ')
+    for (; *s != '\0'; s++)
+        if (*s == ' ')
             count++;
     return count;
 }
