@@ -2,9 +2,9 @@
 
 size_t my_strlen(const char *s)
 {
-    size_t n;
+    size_t n = 0;
 
-    for (n = 0; *s != '\0'; s++)
+    for (; *s != '\0'; s++)
         n++;
     return n;
 }
