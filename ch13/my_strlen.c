@@ -4,7 +4,7 @@ size_t my_strlen(const char *s)
 {
     size_t n = 0;
 
-    for (; *s; s++)
+    for (; *s++;)
         n++;
     return n;
 }
