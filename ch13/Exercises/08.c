@@ -1,5 +1,5 @@
 /* 
- * Chapter 13 Exercise 07.c: What will be the value of the 
+ * Chapter 13 Exercise 08.c: What will be the value of the 
  * string str after the following statements have been executed?
  * strcpy(str, "tire-bouchon");
  * strcpy(&str[4], "d-or-wi");
