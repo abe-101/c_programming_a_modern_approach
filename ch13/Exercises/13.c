@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
     }
     
     char index_url[URL];
-    char *domain = argv[1];
+    const char *domain = argv[1];
     build_index_url(domain, index_url);
     printf("%s\n", index_url);
 }
