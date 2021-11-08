@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
 {
     if (argc != 2)
     {
-        printf("Usage: ./14.c domain_url\n");
+        printf("Usage: ./13.c domain_url\n");
         return 1;
     }
     
