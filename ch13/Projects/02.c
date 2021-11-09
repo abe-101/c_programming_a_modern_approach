@@ -33,13 +33,15 @@ int main(void)
 
         printf("Enter day and reminder: ");
         scanf("%2d", &day);
-        if (day == 0)
+        if (day == 0) 
             break;
         sprintf(day_str, "%2d", day);
         read_line(msg_str, MSG_LEN);
         
-        if (day < 0 || day > 31)
+        if (day < 0 || day > 31) {
+            printf("Invalid date\n");
             continue;
+        }
 
         for (i = 0; i < num_remind; i++)
             if (strcmp(day_str, reminders[i]) < 0)
