@@ -31,14 +31,13 @@ int read_lines(char str[], int n)
 int compute_vowel_count(const char *sentance)
 {
 	int vowels = 0;
-    while(*sentance)
+    while(*sentance++)
     {
         switch (toupper(*sentance)) {
- 			case 'A': case 'E': case 'I': case 'O': case 'u':
+ 			case 'A': case 'E': case 'I': case 'O': case 'U':
 				vowels++;
 				break; 
         }
-        sentance++;
     }
     return vowels;
 }
