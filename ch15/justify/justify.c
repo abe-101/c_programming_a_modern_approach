@@ -20,7 +20,7 @@
 
 int main(void)
 {
-    char word[MAX_WORD_LEN];
+    char word[MAX_WORD_LEN+2];
     int word_len;
 
     clear_line();
