@@ -34,7 +34,7 @@ int main(void)
         if (word_len > MAX_WORD_LEN)
             word[MAX_WORD_LEN] = '*';
         if (word_len + 1 > space_remaining()) {
-            write();
+            write_line();
             clear_line();
         }
         add_word(word);
