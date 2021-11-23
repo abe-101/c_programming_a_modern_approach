@@ -13,11 +13,11 @@
 
 #include <stdio.h>
 #include <string.h>
+#include "readline.h"
 
 #define MAX_REMIND 50   // maximum number of reminders
 #define MSG_LEN 60     // max length of reminder message
 
-int read_line(char str[], int n);
 
 int main(void)
 {
@@ -57,13 +57,4 @@ int main(void)
     return 0;
 }
 
-int read_line(char str[], int n)
-{
-    int ch, i = 0;
 
-    while ((ch = getchar()) != '\n')
-        if (i < n)
-            str[i++] = ch;
-    str[i] = '\0';
-    return i;
-}
