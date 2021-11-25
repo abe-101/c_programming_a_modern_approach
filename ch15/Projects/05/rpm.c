@@ -2,6 +2,7 @@
 #include <stdlib.h>  /* exit */
 #include <ctype.h>   /* isdigit */
 #include "stack.h"
+#include <stdbool.h>
 
 int main(void) {
 
