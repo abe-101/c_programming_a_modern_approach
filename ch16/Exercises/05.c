@@ -35,6 +35,35 @@ int day_of_year(struct date d)
     return total_days;
 }
 
+//Returns -1 if d1 is earlier than d2, 1 if d1 is later than d2, and 0 if the same
+int compare_dates(struct date d1, struct date d2)
+{
+    int comparison;
+
+    //compare years
+    if (d1.year < d2.year)
+        comparison = EARLIER;
+    else if (d1.year > d2.year)
+        comparison = LATER;
+
+    //Years are the same , so we compare days
+    else {
+        int d1_days = day_of_year(d1);
+        int d2_days = day_of_year(d2);
+
+        if (d1_days < d2_days)
+            comparison = EARLIER;
+        else if (d1_days > d2_days)
+            comparison = LATER;
+        else
+            comparison = SAME;
+
+
+    }
+    return comparison;
+}
+           
+
 int main(void)
 {
     struct date d1 = {3, 12, 2012};
@@ -44,6 +73,16 @@ int main(void)
             d1.year, day_of_year(d1));
     printf("Day of year in date %.2d/%.2d/%.4d: %d\n", d2.month, d2.day,
             d2.year, day_of_year(d2));
+   
+    printf("Comparison of the dates %.2d/%.2d/%.4d and %.2d/%.2d/%.4d: %d\n",
+            d1.month, d1.day, d1.year, d2.month, d2.day, d2.year,
+            compare_dates(d1, d2));
+    printf("Comparison of the dates %.2d/%.2d/%.4d and %.2d/%.2d/%.4d: %d\n",
+            d2.month, d2.day, d2.year, d1.month, d1.day, d1.year,
+            compare_dates(d2, d1));
+    printf("Comparison of the dates %.2d/%.2d/%.4d and %.2d/%.2d/%.4d: %d\n",
+            d1.month, d1.day, d1.year, d1.month, d1.day, d1.year,
+            compare_dates(d1, d1));
 
     return 0;
 }
