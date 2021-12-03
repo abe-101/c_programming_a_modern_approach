@@ -4,8 +4,9 @@ struct point { int x, y; };
 struct rectangle { struct point upper_left, lower_right; };
 
 //Prototypes
+int compute_width(struct rectangle r);
+int compute_height(struct rectangle r);
 int compute_area(struct rectangle r);
-
 
 int main(void)
 {
@@ -17,7 +18,19 @@ int main(void)
 }
 
 
+int compute_width(struct rectangle r)
+{
+    return r.lower_right.x - r.upper_left.x;
+}
+
+int compute_height(struct rectangle r)
+{
+    return r.lower_right.y - r.upper_left.y;
+}
+
 int compute_area(struct rectangle r)
 {
-    return (r.lower_right.x - r.upper_left.x) * (r.lower_right.y - r.upper_left.y);
+    return compute_width(r) * compute_height(r);
 }
+
+
