@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 struct point { int x, y; };
 struct rectangle { struct point upper_left, lower_right; };
@@ -9,6 +10,7 @@ int compute_height(struct rectangle r);
 int compute_area(struct rectangle r);
 struct point compute_center(struct rectangle r);
 struct rectangle shift_rectangle(struct rectangle move, int x, int y);
+bool check_point_in_rectangle(struct point p, struct rectangle r);
 
 int main(void)
 {
@@ -21,6 +23,13 @@ int main(void)
     struct rectangle r2 = shift_rectangle(r1, 10, 10);
     struct point center2 = compute_center(r2);
     printf("Center: %d,%d\n", center2.x, center2.y);
+
+    struct point p1 = {15, 10};
+    printf("Rectangle upper left: %d,%d\n", r2.upper_left.x, r2.upper_left.y);
+    printf("Rectangle lower right: %d,%d\n", r2.lower_right.x, r2.lower_right.y);
+    printf("Point %d,%d is in rectangle?: %d", p1.x, p1.y,
+            check_point_in_rectangle(p1, r2));
+
 
     return 0;
 }
@@ -57,4 +66,15 @@ struct rectangle shift_rectangle(struct rectangle move, int x, int y)
     move.lower_right.y += y;
 
     return move;
+}
+
+bool check_point_in_rectangle(struct point p, struct rectangle r)
+{
+    if (!(p.x >= r.upper_left.x && p.x <= r.lower_right.x))
+        return false;
+
+    if (!(p.y >= r.upper_left.y && p.y <= r.lower_right.y))
+        return false;
+
+    return true;
 }
