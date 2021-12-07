@@ -1,17 +1,16 @@
-#include <ctype.h>
+#include <ctype.h> /* isspace */
 #include <stdio.h>
 #include "readline.h"
 
-int read_line(char str[], int n)
-{
-    int ch, i = 0;
+int read_line(char str[], int n) {
+    int c, i = 0;
 
-    while (isspace(ch = getchar()))
+    while (isspace(c = getchar()))
         ;
-    while (ch != '\n' && ch != EOF) {
+    while (c != '\n' && c != EOF) {
         if (i < n)
-            str[i++] = ch;
-        ch = getchar();
+            str[i++] = c;
+        c = getchar();
     }
     str[i] = '\0';
     return i;
