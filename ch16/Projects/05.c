@@ -28,6 +28,8 @@ int main(void)
            break;
         }
     }
+    i--;
+
     printf("Closest departure time is %.2d:%2d arriving at %.2d:%.2d\n",
           flights[i].departure / 60, flights[i].departure % 60,
           flights[i].arrival / 60, flights[i].arrival % 60);
