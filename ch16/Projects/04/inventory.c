@@ -19,6 +19,7 @@ int find_part(int number);
 void insert(void);
 void search(void);
 void update(void);
+void change(void);
 void print(void);
 
 /************************************************************
@@ -43,6 +44,8 @@ int main(void)
             case 's': search();
                       break;
             case 'u': update();
+                      break;
+            case 'c': change();
                       break;
             case 'p': print();
                       break;
@@ -95,7 +98,7 @@ void insert(void)
     inventory[num_parts].number = part_number;
     printf("Enter part name: ");
     read_line(inventory[num_parts].name, NAME_LEN);
-    printf("Enter Price: ");
+    printf("Enter Price: $");
     scanf("%f", &inventory[num_parts].price);
     printf("Enter quantity on hand: ");
     scanf("%d", &inventory[num_parts].on_hand);
@@ -145,6 +148,27 @@ void update(void)
 }
 
 
+ /***********************************************************
+ * change: Promts the user to enter a part number.          *
+ *         Prints an error message if the part doesn't      *
+ *         exist; otherwise, prompts the user to change     *
+ *         price of item                                    *
+ ************************************************************/
+void change(void)
+{
+    int i, number;
+    float change;
+
+    printf("Enter part number: ");
+    scanf("%d", &number);
+    i = find_part(number);
+    if (i >= 0) {
+        printf("Enter new price: $");
+        scanf("%f", &change);
+        inventory[i].price = change;
+    } else
+        printf("Part not found.\n");
+}
  /***********************************************************
  * print: Prints a listing of all parts in the database,    *
  *        showing the part number, part name, and           *
