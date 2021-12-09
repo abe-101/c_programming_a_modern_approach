@@ -1,5 +1,4 @@
 CC=gcc
-CFLAGS=-Wall -Wextra -Wpedantic -std=c99
 
 inventory: inventory.o readline.o quicksort.o
 	$(CC) -o inventory inventory.o readline.o quicksort.o $(CFLAGS)
