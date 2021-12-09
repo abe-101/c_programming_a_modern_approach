@@ -4,7 +4,7 @@ int main(void)
 {
    	int hour, minute, user_time, d1, d2, d3, d4, d5, d6, d7, d8;
 
-						/* Departure Times  Arival Time */
+						/* Departure Times  Arrival Time */
 
 		d1 = 8 * 60,		// 8:00 a.m.	10:16 a.m.
 		d2 = 9 * 60 + 43,	// 9:43 a.m.	11:52 a.m.
