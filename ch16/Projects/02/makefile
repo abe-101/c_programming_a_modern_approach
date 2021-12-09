@@ -1,13 +1,11 @@
-CC=gcc
-
 inventory: inventory.o readline.o quicksort.o
-	$(CC) -o inventory inventory.o readline.o quicksort.o $(CFLAGS)
+	gcc -o inventory inventory.o readline.o quicksort.o
 
 inventory.o: inventory.c inventory.h readline.h quicksort.h
-	$(CC) -c inventory.c $(CFLAGS)
+	gcc -c inventory.c
 
 readline.o: readline.c readline.h
-	$(CC) -c readline.c $(CFLAGS)
+	gcc -c readline.c
 
 quicksort.o: quicksort.c quicksort.h inventory.h
-	$(CC) -c quicksort.c $(CFLAGS)
+	gcc -c quicksort.c 
