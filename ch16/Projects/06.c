@@ -31,7 +31,18 @@ int main(void)
 	scanf("%d /%d /%d", &d2.month, &d2.day, &d2.year);
 
 
-    if (compare_dates(d1, d2))
+    switch (compare_dates(d1, d2)) {
+        case -1: printf("%d/%d/%d is earlier than %d/%d/%d\n",
+                 d1.month, d1.day, d1.year, d2.month, d2.day, d2.year);
+                 break;
+        case 1:  printf("%d/%d/%d is earlier than %d/%d/%d\n",
+                 d2.month, d2.day, d2.year, d1.month, d1.day, d1.year);
+                 break;
+        case 0:  printf("%d/%d/%d is the same as %d/%d/%d\n",
+                 d2.month, d2.day, d2.year, d1.month, d1.day, d1.year);
+                 break;
+    }   
+
 	return 0;
 }
 
