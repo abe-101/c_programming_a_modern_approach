@@ -12,7 +12,8 @@
 #include <math.h>
 #include <stdio.h>
 
-void tabulate(double (*f)(double), double first, double last, double incr);
+void tabulate(double (*f)(double), double first,
+              double last, double incr);
 
 int main(void)
 {
@@ -27,29 +28,30 @@ int main(void)
     printf("Enter increment: ");
     scanf("%lf", &increment);
 
-    printf("\n      x       cos(x)"
-           "\n   _______   _______\n");
+    printf("\n      x        cos(x)"
+           "\n   _______    _______\n");
     tabulate(cos, initial, final, increment);
 
-    printf("\n      x       sin(x)"
-           "\n   _______   _______\n");
+    printf("\n      x        sin(x)"
+           "\n   _______    _______\n");
     tabulate(sin, initial, final, increment);
 
-    printf("\n      x       tan(x)"
-           "\n   _______   _______\n");
+    printf("\n      x        tan(x)"
+           "\n   _______    _______\n");
     tabulate(tan, initial, final, increment);
     
     return 0;
 }
 
-void tabulate(double (*f)(double), double first, double last, double incr)
+void tabulate(double (*f)(double), double first,
+              double last, double incr)
 {
     double x;
     int i, num_intervals;
 
     num_intervals = ceil((last - first) / incr);
     for (i = 0; i <= num_intervals; i++) {
-        x = first + 1 * incr;
+        x = first + i * incr;
         printf("%10.5f %10.5f\n", x, (*f)(x));
     }
 }
