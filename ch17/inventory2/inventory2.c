@@ -1,20 +1,21 @@
-/* Maintains a parts database (array version) */
+/* Maintains a parts database (link list version) */
 
 #include <stdio.h>
+#include <stdlio.h>
 #include "readline.h"
 
 #define NAME_LEN 25 
-#define MAX_PARTS 100
 
 struct part {
     int number;
     char name[NAME_LEN+1];
     int on_hand;
-} inventory[MAX_PARTS];
+    struct part *next;
+};
 
-int num_parts = 0;  /* number of parts currently stored */
+struct part *inventory = NULL;  /* points to first part */
 
-int find_part(int number);
+struct part *find_part(int number);
 void insert(void);
 void search(void);
 void update(void);
@@ -54,7 +55,7 @@ int main(void)
 
  /********************************************************
  * find_part: Looks up a part number in the inventory    * 
- *            array. Returns the array index if the part *
+ *            list. Returns a pointer to the node*
  *            number is found; otherwise, return -1.     * 
  *********************************************************/
 int find_part(int number)
