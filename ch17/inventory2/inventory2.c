@@ -1,7 +1,7 @@
 /* Maintains a parts database (link list version) */
 
 #include <stdio.h>
-#include <stdlio.h>
+#include <stdlib.h>
 #include "readline.h"
 
 #define NAME_LEN 25 
