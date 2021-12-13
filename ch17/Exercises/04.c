@@ -11,7 +11,6 @@ int main(void)
         printf("Error, malloc failed.\n");
         exit(EXIT_FAILURE);
     }
-
     p->upper_left.x = 10;
     p->upper_left.y = 25;
     p->lower_right.x = 20;
