@@ -9,6 +9,7 @@
 
 /*  (chapter 17, page 444) */
 /* Tabulates values of trigonometric functions */
+
 #include <math.h>
 #include <stdio.h>
 
