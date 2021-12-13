@@ -12,7 +12,6 @@
 
 #include <math.h>
 #include <stdio.h>
-
 void tabulate(double (*f)(double), double first,
               double last, double incr);
 
