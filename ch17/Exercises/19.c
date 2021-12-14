@@ -21,3 +21,4 @@ void run_command(char *str) {
             return (*file_cmd[i].cmd_pointer)();
     return;
 }
+
