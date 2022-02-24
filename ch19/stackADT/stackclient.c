@@ -1,9 +1,9 @@
-#incldue <stdio.h>
-#include "stackADT"
+#include <stdio.h>
+#include "stackADT.h"
 
 int main(void)
 {
-    stack s1, s2;
+    Stack s1, s2;
     int n;
 
     s1 = create();
