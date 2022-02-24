@@ -1,5 +1,5 @@
-#ifndef STACK_H
-#define STACK_H
+#ifndef STACKADT_H
+#define STACKADT_H
 
 #include <stdbool.h>        // C99 only
 
