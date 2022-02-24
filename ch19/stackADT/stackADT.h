@@ -3,7 +3,7 @@
 
 #include <stdbool.h>        // C99 only
 
-typedef struct stack_tpe *Stack;
+typedef struct stack_type *Stack;
 
 Stack create(void);
 void destroy(Stack s);
